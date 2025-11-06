@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hetvi Patel — Resume</title>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#7c3aed; --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.03);
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:#e6eef8;background:linear-gradient(180deg,#071023 0%, #071827 60%);}
+    .wrap{max-width:1100px;margin:32px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,0.7);}
+    header{display:flex;align-items:center;gap:18px}
+    .avatar{width:96px;height:96px;border-radius:12px;overflow:hidden;box-shadow:0 6px 20px rgba(124,58,237,0.18);}
+    h1{margin:0;font-size:26px}
+    .meta{color:var(--muted);font-size:14px}
+    nav{display:flex;gap:12px;margin-left:auto}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--muted);cursor:pointer}
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#06b6d4);border:none;color:white}
+
+    /* layout */
+    .cols{display:grid;grid-template-columns:320px 1fr;gap:22px;margin-top:22px}
+    .card{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.02));padding:16px;border-radius:12px;border:1px solid var(--glass-2);}
+
+    /* left */
+    .contact{font-size:14px;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+    .section-title{font-weight:700;color:white;margin-bottom:10px}
+
+    /* right */
+    .about p{color:#d7e6fb;margin-top:6px}
+    .timeline{display:flex;flex-direction:column;gap:12px}
+    .event{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+    .project{padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);cursor:pointer;border:1px solid rgba(255,255,255,0.03)}
+    .project h4{margin:0}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.02);color:var(--muted)}
+
+    /* footer */
+    footer{display:flex;justify-content:space-between;align-items:center;margin-top:18px;color:var(--muted);font-size:14px}
+
+    @media(max-width:900px){.cols{grid-template-columns:1fr;}.avatar{width:72px;height:72px}}
+
+    @media print{body, .wrap{background: white;color:#111;} .card{background:transparent;border:none} .btn, nav, .modal{display:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap" id="resume-root">
+    <header>
+      <div class="avatar">
+        <img src="IMG-20250911-WA00022.jpg" alt="Hetvi Patel" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+      </div>
+
+      <div>
+        <h1>HETVI PATEL</h1>
+        <div class="meta">aeistog@gmail.com · 96381 26890 · Vadodara · Surat</div>
+      </div>
+      <nav>
+       
+        <button class="btn primary" id="contact-btn">Contact</button>
+      </nav>
+    </header>
+
+    <div class="cols">
+      <aside>
+        <div class="card">
+          <div class="section-title">About Me</div>
+          <div class="contact">
+            <div class="about"><p>Curious, analytical, and introspective. I value authenticity and independence; I prefer to learn by doing and to build work that feels meaningful and mine.</p></div>
+          </div>
+        </div>
+
+        <div class="card skills" style="margin-top:12px">
+          <div class="section-title">Skills</div>
+          <ul style="color:var(--muted);line-height:1.7">
+            <li>Communication & Public Speaking</li>
+            <li>Research & Information Gathering</li>
+            <li>Quick Learner / Adaptability</li>
+            <li>Team Collaboration</li>
+            <li>Helpful hand ,creative</li>
+          </ul>
+        </div>
+
+        <div class="card skills" style="margin-top:12px">
+          <div class="section-title">Languages</div>
+          <ul style="color:var(--muted);line-height:1.7">
+            <li>English (EN)</li>
+            <li>Hindi (HI)</li>
+            <li>Gujarati (GUJ)</li>
+            <li>Marathi (MR, Beginner)</li>
+          </ul>
+        </div>
+
+      </aside>
+
+      <main>
+        <div class="card">
+          <div class="section-title">Education</div>
+          <div class="timeline">
+            <div class="event"><strong>B.Tech — CSE, Parul University</strong><div style="color:var(--muted);font-size:13px">Ongoing</div></div>
+            <div class="event"><strong>12th PCM — 89%</strong><div style="color:var(--muted);font-size:13px">Passed with A2 grade</div></div>
+            <div class="event"><strong>11th PCMB — 93.5%</strong><div style="color:var(--muted);font-size:13px">Excelled in Maths and Bio</div></div>
+            <div class="event"><strong>10th — 94%</strong><div style="color:var(--muted);font-size:13px">Acquired A1 grade</div></div>
+            <div class="event"><strong>JEE Mains — 94.97 percentile</strong><div style="color:var(--muted);font-size:13px">Qualified for JEE Advanced</div></div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <div class="section-title">Experience</div>
+          <div class="timeline">
+            <div class="event"><strong>Tutor / Freelancer</strong><div style="color:var(--muted);font-size:13px">Taught for ~2 months — conceptual clarity & mentoring</div></div>
+            <div class="event"><strong>Intern — Scaler Institute of Technology</strong><div style="color:var(--muted);font-size:13px">Mentored for weeks and received certificate based on performance</div></div>
+            <div class="event"><strong>Participated in nssc by IIT kgp</strong><div style="color:var(--muted);font-size:13px"></div></div>
+
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <div class="section-title">Projects (click for details)</div>
+          <div class="projects">
+            <div class="project" data-project="ecopulse"><h4>ECOPULSE</h4><div class="tags"><span class="tag">First Project</span><span class="tag">Top 44 Teams, SIH 2025</span></div></div>
+            <div class="project" data-project="rfp"><h4>AI-Driven RFP App</h4><div class="tags"><span class="tag">First AI Agent</span><span class="tag">Hackathon: Asian Paints & multiple companies</span></div></div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <div class="section-title">Personal Interests</div>
+          <div style="color:var(--muted);line-height:1.6">
+            Reading, Writing, Research, Singing, Travelling, Astro-enthusiast, Art
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+    <footer>
+      <div>Contact me for project details !</div>
+      <div style="display:flex;gap:10px">
+        
+        <a class="btn" href="mailto:aeistog@gmail.com">Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // project modal content
+    const data = {
+      ecopulse: {title:'ECOPULSE', text:'ECOPULSE is my first-ever project, aimed at transforming waste management — features include location-based pickup scheduling, recycler mapping, and incentives for proper disposal. We were among the top 44 teams of the university and currently competing in SIH 2025.'},
+      rfp: {title:'AI-Driven RFP App', text:'My first project creating an AI agent — a prototype that automates extraction and categorization of RFP elements. Hackathon led by multiple private companies including Asian Paints.'}
+    };
+
+    document.querySelectorAll('.project').forEach(el=>{
+      el.addEventListener('click',()=>{
+        const key = el.getAttribute('data-project');
+        const m = document.createElement('div');
+        const modal = document.createElement('div');
+        if(!document.getElementById('modal')){
+          const modalDiv = document.createElement('div');
+          modalDiv.id='modal';
+          modalDiv.style= 'position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,6,23,0.6);z-index:40';
+          modalDiv.innerHTML = `<div style="width:92%;max-width:760px;background:#071428;padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);color:var(--muted)"><div style="display:flex;align-items:center;gap:12px"><div style="font-weight:700">Project Details</div><button class='btn close'>Close</button></div><div style='margin-top:12px;color:var(--muted)'>${data[key].text}</div></div>`;
+          document.body.appendChild(modalDiv);
+          modalDiv.querySelector('.close').addEventListener('click',()=>{modalDiv.style.display='none'});
+          modalDiv.addEventListener('click',(e)=>{if(e.target==modalDiv) modalDiv.style.display='none'});
+        } else {
+          document.getElementById('modal').style.display='flex';
+          document.getElementById('modal').querySelector('div div:nth-child(2)').innerText = data[key].text;
+        }
+      })
+    });
+
+    // Download / Print handlers
+    document.getElementById('print-btn').addEventListener('click',()=>{window.print()});
+
+    document.getElementById('download-pdf').addEventListener('click',()=>{
+      const scriptId = 'html2pdf-lib';
+      if(!document.getElementById(scriptId)){
+        const s = document.createElement('script');
+        s.id = scriptId;
+        s.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js';
+        s.onload = buildPdf;
+        document.body.appendChild(s);
+      } else buildPdf();
+
+      function buildPdf(){
+        const el = document.getElementById('resume-root');
+        const opt = {
+          margin:0.4,
+          filename:'Hetvi_Patel_Resume.pdf',
+          image:{type:'jpeg',quality:0.98},
+          html2canvas:{scale:2,logging:false,useCORS:true},
+          jsPDF:{unit:'in',format:'a4',orientation:'portrait'}
+        };
+        html2pdf().set(opt).from(el).save();
+      }
+    });
+
+    // Contact CTA
+    document.getElementById('contact-btn').addEventListener('click',()=>{window.location.href='mailto:aeistog@gmail.com?subject=Hi Hetvi — Resume Contact';});
+  </script>
+</body>
+</html>
